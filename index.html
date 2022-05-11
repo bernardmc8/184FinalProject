@@ -10,6 +10,11 @@
 			Aekus Bhathal (email: abhathal@berkeley.edu, github:aekus),
 			Bernard Chan (email: bernardmc8@berkeley.edu, github:bernardmc8)</p>
 
+		<p>Final Project Video:</p>
+		<video width="800" height="600" controls>
+			<source src="images/final-project-video.mov" type="video/mp4">
+		</video>
+
 		<p><big>Abstract:</big></p>
 		<p>This project builds upon CS184’s Proj3-1 to try and make ray-tracing faster specifically for moving light sources. It does this by precomputing all of the ray trajectories for the scene and storing this information. Because we use hemisphere sampling, none of these rays depend on the light source location. This means we no longer need to recompute the ray trajectories, which is what makes the ray-tracing faster. As part of this implementation, CS184’s Proj3-1 logic and UI also had to be extended to support the moving of the light sources within a single, concurrent run of the program. </p>
 
@@ -46,7 +51,11 @@
 		<p>Another metric we can look at is memory usage. Our implementation takes more storage than the original Proj3-1 implementation, which makes complete sense as we have to precompute and store the information to get a speed-up, so this graph is not an indicator of something bad. However, it does show that our algorithm, while effective on a smaller scale, might not be very effective on a large scale with many, many samples per pixel. One of our main potential next steps if we had much more time with this would be to find a more efficient way to store our information. That being said, our algorithm does not take an insane amount of memory for the normal cases that Proj3-1 are rendering anyways, so it’s a good solution for these images, just maybe not if we were sending them to a 4K movie screen.</p>
 		<img src="images/Screenshot_5.jpg">
 		<p>We’ve also included some sanity checks to show that the images still render correctly with our new implementation and speedup.</p>
-		<img src="images/Screenshot_6.jpg">
+		<p>Original Proj3-1 Rendering:</p>
+		<img src="images/Screenshot_theirs.jpg">
+		<p>Our Implementation Rendering:</p>
+		<img src="images/Screenshot_ours.jpg">
+		<p>Our Implementation Renderings with Light-Moving Functionality:</p>
 		<img src="images/Screenshot_7.jpg">
 		<img src="images/Screenshot_8.jpg">
 
@@ -56,7 +65,7 @@
 
 		<p><big>Contributions:</big></p>
 		<p>Sofia Sun: Worked on coding the light moving part of the project. Generated comparison images for the project. </p>
-		<p>	Shawn Huang: Edited Milestone Report and slides, made Milestone video, fixed major bugs in the code, generated results graphs/images</p>
+		<p>	Shawn Huang: Edited Milestone Report and slides, made Milestone video, fixed major bugs in the code, generated results graphs/images, created final video</p>
 		<p>	Aekus Bhathal: Designed the algorithm, wrote the majority of the code, fixed bugs in the code.</p>
 		<p>	Bernard Chan: Wrote first draft and majority of the Milestone Report, Wrote first draft and majority of the Final Report. Created Final Report website. Created the Milestone slides.</p>
 		<p>	All team members: Brainstormed ideas, drafted plan, wrote project proposal, revised/edited milestone report, revised/edited final report, made final presentation slides and presented, looked over deliverables/code and made suggestions for change</p>
